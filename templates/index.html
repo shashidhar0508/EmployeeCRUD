@@ -309,8 +309,10 @@ $(document).ready(function(){
 						<td>{{result.email}}</td>
 						<td>{{result.econtact}}</td>
 						<td>
-							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-							<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+<!--							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>-->
+							<a href="/edit/{{result.eid}}"  ><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+<!--							<a href="/delete/{{result.eid}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>-->
+							<a href="/delete/{{result.eid}}" ><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
 						</td>
 					</tr>
 				{% endfor %}
@@ -383,15 +385,15 @@ $(document).ready(function(){
 				</div>
 				<div class="modal-body">
 					<div class="form-group">
-						<label>Name</label>
+						<label>Employee ID</label>
 						<input type="text" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Email</label>
+						<label>Name</label>
 						<input type="email" class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Address</label>
+						<label>Email</label>
 						<textarea class="form-control" required></textarea>
 					</div>
 					<div class="form-group">
