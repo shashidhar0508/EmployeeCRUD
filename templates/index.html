@@ -237,6 +237,8 @@ table.table .avatar {
 	font-weight: normal;
 }
 
+
+
     </style>
     <script>
 $(document).ready(function(){
@@ -263,6 +265,8 @@ $(document).ready(function(){
 	});
 });
 
+
+
     </script>
 </head>
 <body>
@@ -275,8 +279,8 @@ $(document).ready(function(){
                         <h2>Manage <b>Employees</b></h2>
                     </div>
                     <div class="col-sm-6">
-                        <a href="{% url 'Insertemp' %}">ADD NEW EMPLOYEE</a>
-                        <!--						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>-->
+                        <a href="{% url 'Insertemp' %}" class="btn btn-success"><i
+                                class="material-icons">&#xE147;</i> <span>Add New Employee</span></a>
                     </div>
                 </div>
             </div>
@@ -298,10 +302,9 @@ $(document).ready(function(){
                     <td>{{result.email}}</td>
                     <td>{{result.phoneno}}</td>
                     <td>
-                        <!--							<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>-->
-                        <a href="/edit/{{result.empid}}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                        <!--							<a href="/delete/{{result.eid}}" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>-->
-                        <a href="/delete/{{result.empid}}"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                        <a href="/edit/{{result.empid}}" class="edit"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                        <a href="/delete/{{result.empid}}" class="delete"><i class="material-icons" data-toggle="tooltip"
+                                                              title="Delete">&#xE872;</i></a>
                     </td>
                 </tr>
                 {% endfor %}
